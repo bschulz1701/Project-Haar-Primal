@@ -6874,7 +6874,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="FRAME1" library="bschulz" deviceset="FRAME_A_L" device="">
 <attribute name="DESIGNER" value="Bobby Schulz"/>
 <attribute name="PROJECT" value="Haar-Primal"/>
-<attribute name="REV" value="v0.1"/>
+<attribute name="REV" value="v2.0"/>
 </part>
 <part name="J1" library="GEMS_Plugs" deviceset="CONN_I2C_SENSOR" device="_EDGE_MOUNT"/>
 </parts>
@@ -7161,13 +7161,6 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinref part="J1" gate="G$1" pin="GND"/>
 </segment>
 </net>
-<net name="INT_PRES" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="SDO"/>
-<wire x1="73.66" y1="182.88" x2="81.28" y2="182.88" width="0.1524" layer="91"/>
-<label x="73.66" y="182.88" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="INT_RH" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="ALERT"/>
@@ -7182,17 +7175,17 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <label x="43.18" y="147.32" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="CSB"/>
-<wire x1="45.72" y1="182.88" x2="43.18" y2="182.88" width="0.1524" layer="91"/>
-<label x="43.18" y="182.88" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="193.04" y1="60.96" x2="193.04" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="63.5" x2="195.58" y2="63.5" width="0.1524" layer="91"/>
 <label x="195.58" y="63.5" size="1.27" layer="95" xref="yes"/>
 <pinref part="JP1" gate="G$1" pin="1"/>
 <junction x="193.04" y="63.5"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="SDO"/>
+<wire x1="73.66" y1="182.88" x2="81.28" y2="182.88" width="0.1524" layer="91"/>
+<label x="73.66" y="182.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PG" class="0">
