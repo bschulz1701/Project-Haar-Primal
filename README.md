@@ -77,11 +77,24 @@ Scripts and results from the testing process and development process. Contains m
 [^1]: [SHT31 Datasheet](https://sensirion.com/media/documents/213E6A3B/63A5A569/Datasheet_SHT3x_DIS.pdf)
 [^2]: [DPS368 Datasheet](https://www.infineon.com/dgdl/Infineon-DPS368-DS-v01_00-EN.pdf?fileId=5546d46269e1c019016a0c45105d4b40)
 
+## Version History
+
+`v0.0` - Initial primal version with screw terminal
+
+`v0.1` - Initial 'hard mount' version, using M12 connector
+
+`v1.0` - Removed pullup select[^3], added logic level buffer and voltage reg on input
+
+`v1.1` - Moved via away from connector pads to prevent bridging when soldering 
+
+`v2.0` - Fixed issue with address select jumper[^3]
 
 ## Jumper Settings 
 
 > [!IMPORTANT]
-> Jumper settings valid for version `v0.1` and beyond
+> Jumper settings valid for version `v2.0` and beyond[^3]
+
+[^3]: See Errata
 
 **Configuration Jumpers**
 | Jumper | Purpose | Open | Closed | Default | 
@@ -114,10 +127,10 @@ Scripts and results from the testing process and development process. Contains m
 
 #### Address Jumper
 
-**Version Affected:** `v0.1`
+**Version Affected:** `v0.1` to `v1.1`
 
 **Issue:** `SDO` pin on DSP368 was erroniously left floating, meaning the DPS368 is continually fixed at the address of `0x76` and will not be effected by the address jumper status
 
 **Workaround:** Leave jumper closed on device, this will hold the SHT31 at the default address as well and keep the address combination consistent 
 
-**Resolution:** Fixed in version `v1.0` and beyond  
+**Resolution:** Fixed in version `v2.0` and beyond  
