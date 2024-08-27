@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/678911830.svg)](https://zenodo.org/doi/10.5281/zenodo.13377368)
+
 # Project-Haar-Primal
 A minimal temp/pressure/RH sensor designed for environmental monitoring. Built off the [Haar](https://github.com/NorthernWidget-Skunkworks/Project-Haar) system, developed by Bobby Schulz at Northern Widget 
 
